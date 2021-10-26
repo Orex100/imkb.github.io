@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="wiewport" content="width=device-width, inital-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>9/A Sınıfı</title>
+    </head>
+    <body>
+        <div class="9a">
+            <h1 style="font-size: 50px; font-weight: 999; text-shadow: 3px 3px gray; font-family: sans-serif;">9/A</h1>
+        </div>
+        <hr>
+        <div class="9a-event">
+            <div class="tarihprojesi-container">
+                <div class="tarihprojesi-title">
+                    <h2 style="font-size: 20px; font-weight: 999; font-family: sans-serif;">Tarih Projesi Kalan Süre:</h2>
+                </div>
+                <div class="tarihprojesi-countdown">
+                    <div class="count">
+                        <div class="countd">
+                            <span id="day">00</span>
+                            Gün
+                        </div>
+                        
+                    
+                    
+                        <div class="countd">
+                            <span id="hour">00</span>
+                            Saat
+                        </div>
+                    
+        
+                        <div class="countd">
+                            <span id="minute">00</span>
+                            Dakika
+                        </div>
+                    
+        
+                    
+                        <div class="countd">
+                            <span id="second">00</span>
+                            Saniye
+                        </div>
+                        <br>
+                        <br>
+                        <p style="color: brown; font-weight: 999;">Not: Tarih Projesinin yapımı için ayrılan süre 23.11.2021 yada 30.11.2021 tarihinde bitecektir. Gerisayım şablonu 23.11.2021 tarihine ayarlanmıştır.</p>
+                        <br>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="back">
+            <a href="/index.html" class="back">Geri Dön</a>
+        </div>
+        <script type="text/javascript">
+
+            var count = new Date("November 23,2021 15:00:00").getTime();
+            var X = setInterval(function() {
+                var now = new Date().getTime();
+                var d = count - now;
+
+                var days = Math.floor(d/(1000*60*60*24));
+                var hours = Math.floor((d%(1000*60*60*24))/(1000*60*60));
+                var minutes = Math.floor((d%(1000*60*60))/(1000*60));
+                var seconds = Math.floor((d%(1000*60))/1000);
+
+                document.getElementById("day").innerHTML = days;
+                document.getElementById("hour").innerHTML = hours;
+                document.getElementById("minute").innerHTML = minutes;
+                document.getElementById("second").innerHTML = seconds;
+                
+            },1000);
+
+
+            if(d <= 0){
+                clearInterval(X);
+            }
+        </script>
+    </body>
+</html>

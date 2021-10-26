@@ -1,0 +1,42 @@
+* {
+    background-color: #d0c9cf ;
+}
+
+.bbi-classes-9a-container {
+    border: dashed 2px black;
+    width: 260px;
+    border-radius: 10px;
+}
+
+.bbi-classes-9a-title {
+    text-align: center;
+}
+
+.bbi-classes-9a-info {
+    position: relative;
+    left: 10px;
+    width: 100px;
+}
+
+.bbi-classes-9a-a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    left: 70px;
+    width: 150px;
+}
+
+a:link, a:visited {
+    background-color: #d0c9cf;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+  
+a:hover, a:active {
+    background-color: rgb(143, 145, 145);
+    color: black;
+}
